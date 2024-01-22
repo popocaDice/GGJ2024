@@ -1,0 +1,49 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://c0fbjl3agp3u6"]
+
+[ext_resource type="Texture2D" uid="uid://dtwlkn1qgv541" path="res://tilemap-characters_packed.png" id="1_mu0gq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txs2k"]
+atlas = ExtResource("1_mu0gq")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3p1b"]
+atlas = ExtResource("1_mu0gq")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4k1d"]
+atlas = ExtResource("1_mu0gq")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynguw"]
+atlas = ExtResource("1_mu0gq")
+region = Rect2(120, 0, 24, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txs2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3p1b")
+}],
+"loop": true,
+"name": &"Andando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4k1d")
+}],
+"loop": true,
+"name": &"Parado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynguw")
+}],
+"loop": true,
+"name": &"Pulo",
+"speed": 5.0
+}]
