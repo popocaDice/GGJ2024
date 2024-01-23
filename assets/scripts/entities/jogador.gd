@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name Player
+class_name jogador
 @export var JUMP_FORCE: int = -130
 @export var JUMP_RELEASE_FORCE: int = -70
 @export var MAX_SPEED: int = 50
@@ -49,12 +49,12 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		jumpInput = false
-		if Input.is_action_just_pressed("Jump"):
+		if Input.is_action_just_pressed("Pulo"):
 			velocity.y = JUMP_FORCE
 			jumpInput = true
 	else:
 		animatedSprite.play("Pulo")
-		if Input.is_action_just_released("Jump") and jumpInput and velocity.y <= JUMP_RELEASE_FORCE:
+		if Input.is_action_just_released("Pulo") and jumpInput and velocity.y <= JUMP_RELEASE_FORCE:
 			velocity.y = JUMP_RELEASE_FORCE
 			jumpInput = false
 
