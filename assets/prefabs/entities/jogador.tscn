@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfk41"]
 size = Vector2(14, 21.5)
 
-[node name="Jogador" type="CharacterBody2D"]
+[node name="Jogador" type="CharacterBody2D" groups=["player"]]
 z_index = 10
 collision_layer = 16
 collision_mask = 255
@@ -17,7 +17,7 @@ ACCELERATION = 20
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = ExtResource("2_o3fh2")
-animation = &"Andando"
+animation = &"Dano"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

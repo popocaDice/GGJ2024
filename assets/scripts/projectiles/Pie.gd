@@ -24,7 +24,6 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	print_debug(body.name)
 	linear_velocity = Vector2.ZERO
 	hit = true
 	$AnimatedSprite2D.play("splash")
@@ -32,5 +31,5 @@ func _on_area_2d_body_entered(body):
 	$AnimatedSprite2D.offset.x += 7*direction
 	$Area2D.queue_free()
 	if body.is_in_group("canHurt"):
-		body.Damage(damage)
+		body.Damage(damage, direction)
 	reparent(body)
