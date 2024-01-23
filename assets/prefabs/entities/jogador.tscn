@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://djlsynqmlmpee"]
+
+[ext_resource type="Script" path="res://assets/scripts/entities/jogador.gd" id="1_ds8mp"]
+[ext_resource type="SpriteFrames" uid="uid://bo6btum4kwyl3" path="res://assets/animations/jogadorAmarelo.tres" id="2_0fq8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfk41"]
+size = Vector2(14, 21)
+
+[node name="Jogador" type="CharacterBody2D"]
+z_index = 10
+collision_layer = 16
+collision_mask = 255
+script = ExtResource("1_ds8mp")
+JUMP_FORCE = -140
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_0fq8w")
+animation = &"Pulo"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_hfk41")
