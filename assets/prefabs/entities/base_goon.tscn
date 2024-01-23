@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://da0trhk7fv7s2"]
+[gd_scene load_steps=7 format=3 uid="uid://da0trhk7fv7s2"]
 
 [ext_resource type="Script" path="res://assets/scripts/entities/base_goon.gd" id="1_2i3rb"]
 [ext_resource type="SpriteFrames" uid="uid://c0fbjl3agp3u6" path="res://assets/animations/base_goon.tres" id="2_i7khy"]
@@ -12,6 +12,9 @@ size = Vector2(8, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b67ro"]
 size = Vector2(4, 21)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tw5dm"]
+size = Vector2(21, 34)
+
 [node name="BaseGoon" type="CharacterBody2D" groups=["canHurt"]]
 z_index = 7
 collision_mask = 255
@@ -21,8 +24,9 @@ MAX_SPEED = 20
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = ExtResource("2_i7khy")
-animation = &"Andando"
+animation = &"Ataque"
 autoplay = "Andando"
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10.5)
@@ -60,7 +64,25 @@ collision_layer = 0
 position = Vector2(0, -10.5)
 shape = SubResource("RectangleShape2D_b67ro")
 
-[connection signal="body_exited" from="LedgeRight" to="." method="_on_ledge"]
-[connection signal="body_exited" from="LedgeLeft" to="." method="_on_ledge"]
-[connection signal="body_entered" from="WallRight" to="." method="_on_wall"]
-[connection signal="body_entered" from="Wall Left" to="." method="_on_wall"]
+[node name="AttackAreaLeft" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackAreaLeft"]
+position = Vector2(-10.5, -17)
+shape = SubResource("RectangleShape2D_tw5dm")
+
+[node name="AttackAreaRight" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackAreaRight"]
+position = Vector2(10.5, -17)
+shape = SubResource("RectangleShape2D_tw5dm")
+
+[connection signal="body_exited" from="LedgeRight" to="." method="_on_ledge_right"]
+[connection signal="body_exited" from="LedgeLeft" to="." method="_on_ledge_left"]
+[connection signal="body_entered" from="WallRight" to="." method="_on_wall_right"]
+[connection signal="body_entered" from="Wall Left" to="." method="_on_wall_left"]
+[connection signal="body_entered" from="AttackAreaLeft" to="." method="_on_attack_area_left"]
+[connection signal="body_entered" from="AttackAreaRight" to="." method="_on_attack_area_right"]
