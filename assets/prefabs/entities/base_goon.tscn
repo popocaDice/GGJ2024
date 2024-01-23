@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://da0trhk7fv7s2"]
+
+[ext_resource type="Script" path="res://assets/scripts/entities/base_goon.gd" id="1_2i3rb"]
+[ext_resource type="SpriteFrames" uid="uid://c0fbjl3agp3u6" path="res://assets/animations/base_goon.tres" id="2_i7khy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ges8p"]
+size = Vector2(12, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdisw"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b67ro"]
+size = Vector2(4, 21)
+
+[node name="BaseGoon" type="CharacterBody2D" groups=["canHurt"]]
+z_index = 7
+collision_mask = 255
+script = ExtResource("1_2i3rb")
+MAX_SPEED = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = ExtResource("2_i7khy")
+animation = &"Andando"
+autoplay = "Andando"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10.5)
+shape = SubResource("RectangleShape2D_ges8p")
+
+[node name="LedgeRight" type="Area2D" parent="."]
+position = Vector2(17, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeRight"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_pdisw")
+
+[node name="LedgeLeft" type="Area2D" parent="."]
+position = Vector2(-17, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeLeft"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_pdisw")
+
+[node name="WallRight" type="Area2D" parent="."]
+position = Vector2(10, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
+position = Vector2(0, -10.5)
+shape = SubResource("RectangleShape2D_b67ro")
+
+[node name="Wall Left" type="Area2D" parent="."]
+position = Vector2(-10, 0)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Left"]
+position = Vector2(0, -10.5)
+shape = SubResource("RectangleShape2D_b67ro")
+
+[connection signal="body_exited" from="LedgeRight" to="." method="_on_ledge"]
+[connection signal="body_exited" from="LedgeLeft" to="." method="_on_ledge"]
+[connection signal="body_entered" from="WallRight" to="." method="_on_wall"]
+[connection signal="body_entered" from="Wall Left" to="." method="_on_wall"]

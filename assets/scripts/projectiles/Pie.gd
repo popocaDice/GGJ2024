@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 @export var speed = 20.0
+@export var damage = 1.0
 
 var direction
 var hit = false
@@ -11,7 +12,7 @@ func _ready():
 	
 func Throw():
 	direction = 1 if $AnimatedSprite2D.flip_h else -1
-	apply_central_impulse(Vector2(speed * direction, 0))
+	apply_central_impulse(Vector2(speed * direction, -50))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -23,8 +24,13 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
+	print_debug(body.name)
 	linear_velocity = Vector2.ZERO
 	hit = true
 	$AnimatedSprite2D.play("splash")
 	$AnimatedSprite2D.flip_h = not $AnimatedSprite2D.flip_h
 	$AnimatedSprite2D.offset.x += 7*direction
+	$Area2D.queue_free()
+	if body.is_in_group("canHurt"):
+		body.Damage(damage)
+	reparent(body)
