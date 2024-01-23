@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://tr5wn3stlcvv"]
+
+[ext_resource type="Script" path="res://assets/scripts/entities/spike.gd" id="1_17a26"]
+[ext_resource type="Texture2D" uid="uid://ba7a2u5klf325" path="res://assets/scenes/tilemap_packed.png" id="1_c7467"]
+
+[node name="Spike" type="Area2D"]
+position = Vector2(0, -9)
+script = ExtResource("1_17a26")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_c7467")
+region_enabled = true
+region_rect = Rect2(144, 54, 18, 18)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 9)
+scale = Vector2(0.908619, 1)
+polygon = PackedVector2Array(-7.704, -3, -5.50286, -7, -3.30171, -7, -1.10057, -3, 1.10057, -3, 3.30171, -7, 5.50286, -7, 7.704, -3, 7.704, 0, -7.704, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
