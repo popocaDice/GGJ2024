@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bggidcjldd4fy"]
+
+[ext_resource type="Texture2D" uid="uid://cb610l6l4mfjv" path="res://assets/sprites/GUI/clown_head.png" id="1_er8px"]
+
+[resource]
+HSlider/icons/grabber = ExtResource("1_er8px")
+HSlider/icons/grabber_highlight = null
+HSlider/styles/grabber_area = null
+HSlider/styles/grabber_area_highlight = null

@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bktvxmua0kebw"]
+
+[ext_resource type="FontFile" uid="uid://vfw2sa2hpbrn" path="res://assets/fonts/Circus.ttf" id="1_e4q57"]
+
+[resource]
+Label/colors/font_color = Color(0, 0.0666667, 1, 1)
+Label/fonts/font = ExtResource("1_e4q57")
