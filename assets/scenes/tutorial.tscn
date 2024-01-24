@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://lorkij50xatg"]
+
+[ext_resource type="Texture2D" uid="uid://cb3mq2rb1c77f" path="res://assets/sprites/GUI/base sprite.png" id="1_ly8l2"]
+[ext_resource type="SpriteFrames" uid="uid://bo6btum4kwyl3" path="res://assets/animations/palhaco.tres" id="2_o6fm3"]
+[ext_resource type="SpriteFrames" uid="uid://ky4cq8jl3wla" path="res://assets/animations/botão.tres" id="3_2wk5f"]
+[ext_resource type="FontFile" uid="uid://0yt3yvauu8xs" path="res://assets/fonts/Epson Pixeled.ttf" id="4_1w7tx"]
+
+[node name="tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(158, 54)
+scale = Vector2(0.604167, 0.246914)
+texture = ExtResource("1_ly8l2")
+
+[node name="clown" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(-92.6896, -36.45)
+scale = Vector2(1.65517, 4.05)
+sprite_frames = ExtResource("2_o6fm3")
+animation = &"Torta"
+frame_progress = 0.916775
+
+[node name="buttontart" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(-135.724, -8.10001)
+scale = Vector2(0.703448, 1.62)
+sprite_frames = ExtResource("3_2wk5f")
+frame_progress = 0.84078
+
+[node name="Controles" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 11.0
+offset_right = 224.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("4_1w7tx")
+theme_override_font_sizes/font_size = 18
+text = "Controles"
+
+[node name="AtirarTorta" type="Label" parent="."]
+offset_left = 51.0
+offset_top = 60.0
+offset_right = 134.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("4_1w7tx")
+theme_override_font_sizes/font_size = 9
+text = "Atirar Torta"
