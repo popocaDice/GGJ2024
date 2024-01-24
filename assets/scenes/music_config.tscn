@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=3 uid="uid://c18crotwwg3ey"]
+
+[ext_resource type="Script" path="res://assets/scripts/music_control/soundcontrol.gd" id="1_at0s8"]
+[ext_resource type="Theme" uid="uid://bggidcjldd4fy" path="res://assets/themes/sliders.tres" id="1_r4u6n"]
+[ext_resource type="Theme" uid="uid://bktvxmua0kebw" path="res://assets/themes/circus.tres" id="3_5x4y5"]
+
+[node name="music_config" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -3.0
+offset_right = -1.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BGM" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 76.0
+offset_right = 237.0
+offset_bottom = 92.0
+theme = ExtResource("1_r4u6n")
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_at0s8")
+bus_name = "BGM"
+
+[node name="Label" type="Label" parent="BGM"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = -8.0
+offset_right = 106.0
+offset_bottom = 18.0
+theme = ExtResource("3_5x4y5")
+text = "BGM"
+
+[node name="SFX" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 110.0
+offset_right = 236.0
+offset_bottom = 134.0
+theme = ExtResource("1_r4u6n")
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_at0s8")
+bus_name = "SFX"
+
+[node name="Label" type="Label" parent="SFX"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = -9.0
+offset_right = 107.0
+offset_bottom = 17.0
+theme = ExtResource("3_5x4y5")
+text = "SFX"
+
+[node name="Master" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 43.0
+offset_right = 243.0
+offset_bottom = 59.0
+theme = ExtResource("1_r4u6n")
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_at0s8")
+bus_name = "Master"
+
+[node name="Label" type="Label" parent="Master"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = -9.0
+offset_right = 134.0
+offset_bottom = 17.0
+theme = ExtResource("3_5x4y5")
+text = "Master"
+
+[node name="Voltar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 149.0
+offset_right = 57.0
+offset_bottom = 180.0
+text = "Voltar"
+
+[node name="Menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 148.0
+offset_right = 319.0
+offset_bottom = 179.0
+text = "Menu "
+
+[node name="Testar SFX" type="Button" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 128.0
+offset_right = 191.0
+offset_bottom = 148.0
+theme_override_font_sizes/font_size = 8
+text = "Testar SFX"
