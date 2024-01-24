@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://daruwf226wgs5"]
+
+[ext_resource type="TileSet" uid="uid://2jnxgrtr8d05" path="res://assets/prefabs/tilesets/Blocks.tres" id="1_rf3km"]
+
+[node name="Scenery" type="TileMap"]
+z_index = 4
+tile_set = ExtResource("1_rf3km")
+rendering_quadrant_size = 18
+format = 2
