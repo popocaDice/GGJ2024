@@ -1,0 +1,19 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOggVorbis"
+uid="uid://cy7e2klbfkkln"
+path="res://.godot/imported/Entry of the Gladiator.ogg-2edeb6a52bae1663a5083708b356e7ab.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/bgm/Entry of the Gladiator.ogg"
+dest_files=["res://.godot/imported/Entry of the Gladiator.ogg-2edeb6a52bae1663a5083708b356e7ab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
