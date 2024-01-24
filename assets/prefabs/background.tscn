@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlvmwkkn73bmj"]
+
+[ext_resource type="TileSet" uid="uid://b20wflt2bptb6" path="res://assets/prefabs/tilesets/backgrounds.tres" id="1_5rwiu"]
+
+[node name="Background" type="TileMap"]
+z_index = 3
+tile_set = ExtResource("1_5rwiu")
+format = 2
