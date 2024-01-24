@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://bggidcjldd4fy"]
+
+[resource]
+HSlider/icons/grabber = null
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = null
+HSlider/styles/grabber_area = null
+HSlider/styles/grabber_area_highlight = null
+HSlider/styles/slider = null
