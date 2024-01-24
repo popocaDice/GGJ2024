@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://ky4cq8jl3wla"]
+
+[ext_resource type="Texture2D" uid="uid://gvl00ioqovl4" path="res://assets/sprites/buttons/botão-Sheet.png" id="1_a2d4y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgi51"]
+atlas = ExtResource("1_a2d4y")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qx2f"]
+atlas = ExtResource("1_a2d4y")
+region = Rect2(40, 0, 40, 40)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgi51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qx2f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]

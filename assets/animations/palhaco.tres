@@ -88,7 +88,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_amxih")
 }],
-"loop": false,
+"loop": true,
 "name": &"Torta",
-"speed": 5.0
+"speed": 6.0
 }]
