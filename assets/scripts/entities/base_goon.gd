@@ -69,17 +69,17 @@ func Attack():
 	stunned = false
 	$AnimatedSprite2D.play("Andando")
 
-func _on_ledge_left(body):
+func _on_ledge_left(_body):
 	direction = 1
 	
-func _on_ledge_right(body):
+func _on_ledge_right(_body):
 	direction = -1
 
 
-func _on_wall_left(body):
+func _on_wall_left(_body):
 	direction = 1
 
-func _on_wall_right(body):
+func _on_wall_right(_body):
 	direction = -1
 
 
