@@ -29,7 +29,7 @@ func _on_area_2d_body_entered(body):
 	$AnimatedSprite2D.play("splash")
 	$AnimatedSprite2D.flip_h = not $AnimatedSprite2D.flip_h
 	$AnimatedSprite2D.offset.x += 7*direction
-	$Area2D.queue_free()
+	$Area2D.call_deferred("queue_free")
 	if body.is_in_group("canHurt"):
 		body.Damage(damage, direction)
-	reparent(body)
+	call_deferred("reparent", body)
