@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://da0trhk7fv7s2"]
+[gd_scene load_steps=8 format=3 uid="uid://da0trhk7fv7s2"]
 
 [ext_resource type="Script" path="res://assets/scripts/entities/base_goon.gd" id="1_2i3rb"]
 [ext_resource type="SpriteFrames" uid="uid://c0fbjl3agp3u6" path="res://assets/animations/base_goon.tres" id="2_i7khy"]
+[ext_resource type="AudioStream" uid="uid://dhpobhwya3vog" path="res://assets/sounds/sfx/enemies/monster_hit.wav" id="3_x67wo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ges8p"]
 size = Vector2(12, 21)
@@ -78,6 +79,9 @@ collision_mask = 17
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackAreaRight"]
 position = Vector2(10.5, -17)
 shape = SubResource("RectangleShape2D_tw5dm")
+
+[node name="DamageTaken" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_x67wo")
 
 [connection signal="body_exited" from="LedgeRight" to="." method="_on_ledge_right"]
 [connection signal="body_exited" from="LedgeLeft" to="." method="_on_ledge_left"]

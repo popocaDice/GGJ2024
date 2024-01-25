@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://rspla8fvfdpb"]
+[gd_scene load_steps=9 format=3 uid="uid://rspla8fvfdpb"]
 
 [ext_resource type="Script" path="res://assets/scripts/projectiles/Pie.gd" id="1_bo4sp"]
 [ext_resource type="Texture2D" uid="uid://dkr70y17fls0q" path="res://assets/sprites/characters/GGJ2024Characters-Sheet.png" id="1_k7rgp"]
+[ext_resource type="AudioStream" uid="uid://76ieb8b6o624" path="res://assets/sounds/sfx/tart/hit.wav" id="3_ffr1g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3eowk"]
 atlas = ExtResource("1_k7rgp")
@@ -57,5 +58,8 @@ animation = &"splash"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_eahf1")
+
+[node name="PieHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ffr1g")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -10,6 +10,7 @@ extends CharacterBody2D
 
 @onready var animatedSprite = $AnimatedSprite2D
 @onready var pieProjectile = preload("res://assets/prefabs/projectiles/Pie.tscn")
+@onready var jump_sound = $JumpSound
 
 var jumpInput = false
 var attack = false
@@ -51,6 +52,7 @@ func _physics_process(delta):
 		jumpInput = false
 		if Input.is_action_just_pressed("Pulo") and not stunned:
 			velocity.y = JUMP_FORCE
+			jump_sound.play()
 			jumpInput = true
 	elif not stunned:
 		queueAnimation("Pulo", false)
@@ -109,3 +111,5 @@ func Damage(value, knockDirection):
 	
 func Kill():
 	pass
+	
+
