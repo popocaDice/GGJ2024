@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var MAX_SPEED: int = 30
 @export var FRICTION: int = 10
-@export var MAX_HEALTH = 3
+@export var MAX_HEALTH = 5
 @export var GRAVITY = 980
 @export var CHARGE_COOLDOWN = 5
 @export var CHARGE_MAX_SPEED = 200
@@ -83,25 +83,31 @@ func Kill():
 
 func Attack():
 	
+	set_collision_layer_value(1, false)
 	isCharging = true
 	canCharge = false
 	speed = 0
 	$AnimatedSprite2D.play("Charge")
 	$AnimatedSprite2D.speed_scale = 0.5
+	$ChargeHitbox.monitoring = true
 	
 func Stun():
 	
+	set_collision_layer_value(1, true)
+	$ChargeHitbox.monitoring = false
 	isCharging = false
-	speed = MAX_SPEED
+	speed = 0
 	stunned = true
 	$AnimatedSprite2D.play("Paralizado")
+	$AnimatedSprite2D.speed_scale = 0.5
 	velocity = Vector2(-100*direction, -50)
-	set_collision_layer_value(1, false)
 	await get_tree().create_timer(2).timeout
 	stunned = false
-	$AnimatedSprite2D.play("Andando")
-	set_collision_layer_value(1, true)
+	$AnimatedSprite2D.play("Parado")
 	await get_tree().create_timer(CHARGE_COOLDOWN).timeout
+	$AnimatedSprite2D.play("Andando")
+	$AnimatedSprite2D.speed_scale = 1
+	speed = MAX_SPEED
 	canCharge = true
 
 func _on_ledge_left(_body):
@@ -122,3 +128,7 @@ func _on_wall_right(_body):
 		Stun()
 		return
 	direction = -1
+
+
+func _on_charge_hitbox_body_entered(body):
+	if body.is_in_group("player"): body.Damage(1, direction)
