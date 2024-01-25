@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://du4xbfe1qrs6u"]
+[gd_scene load_steps=20 format=3 uid="uid://du4xbfe1qrs6u"]
 
 [ext_resource type="Script" path="res://assets/scripts/entities/big_goon.gd" id="1_e55vg"]
 [ext_resource type="Texture2D" uid="uid://dkr70y17fls0q" path="res://assets/sprites/characters/GGJ2024Characters-Sheet.png" id="1_k66js"]
@@ -34,6 +34,10 @@ region = Rect2(224, 96, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_a4ori"]
 atlas = ExtResource("1_k66js")
 region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_263t3"]
+atlas = ExtResource("1_k66js")
+region = Rect2(288, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uotqo"]
 atlas = ExtResource("1_k66js")
@@ -88,6 +92,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a4ori")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_263t3")
 }],
 "loop": true,
 "name": &"Parado",
@@ -122,8 +129,12 @@ size = Vector2(8, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8c6s"]
 size = Vector2(4, 17.899)
 
-[node name="BigGoon" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0t7nh"]
+size = Vector2(36, 28)
+
+[node name="BigGoon" type="CharacterBody2D" groups=["canHurt"]]
 z_index = 7
+collision_layer = 3
 script = ExtResource("1_e55vg")
 MAX_SPEED = 15
 CHARGE_COOLDOWN = 2
@@ -131,7 +142,7 @@ CHARGE_COOLDOWN = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_wyfps")
-animation = &"Andando"
+animation = &"Parado"
 autoplay = "Andando"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -180,7 +191,18 @@ position = Vector2(-3, -10)
 target_position = Vector2(-200, 0)
 collision_mask = 17
 
+[node name="ChargeHitbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChargeHitbox"]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_0t7nh")
+
 [connection signal="body_exited" from="LedgeRight" to="." method="_on_ledge_right"]
 [connection signal="body_exited" from="LedgeLeft" to="." method="_on_ledge_left"]
 [connection signal="body_entered" from="WallRight" to="." method="_on_wall_right"]
 [connection signal="body_entered" from="Wall Left" to="." method="_on_wall_left"]
+[connection signal="body_entered" from="ChargeHitbox" to="." method="_on_charge_hitbox_body_entered"]
