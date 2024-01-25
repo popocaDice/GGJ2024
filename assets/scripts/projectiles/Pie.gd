@@ -2,6 +2,7 @@ extends RigidBody2D
 
 @export var speed = 20.0
 @export var damage = 1.0
+@onready var pie_hit = $PieHit
 
 var direction
 var hit = false
@@ -27,6 +28,7 @@ func _on_area_2d_body_entered(body):
 	linear_velocity = Vector2.ZERO
 	hit = true
 	$AnimatedSprite2D.play("splash")
+	pie_hit.play()
 	$AnimatedSprite2D.flip_h = not $AnimatedSprite2D.flip_h
 	$AnimatedSprite2D.offset.x += 7*direction
 	$Area2D.call_deferred("queue_free")

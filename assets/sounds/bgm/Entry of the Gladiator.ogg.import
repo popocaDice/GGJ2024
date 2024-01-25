@@ -2,13 +2,13 @@
 
 importer="ogg_vorbis"
 type="AudioStreamOggVorbis"
-uid="uid://cy7e2klbfkkln"
-path="res://.godot/imported/Entry of the Gladiator.ogg-2edeb6a52bae1663a5083708b356e7ab.oggvorbisstr"
+uid="uid://dp63rksb0egko"
+path="res://.godot/imported/Entry of the Gladiator.ogg-3619582d230ef829a7ec22ad4c421b9b.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/bgm/Entry of the Gladiator.ogg"
-dest_files=["res://.godot/imported/Entry of the Gladiator.ogg-2edeb6a52bae1663a5083708b356e7ab.oggvorbisstr"]
+dest_files=["res://.godot/imported/Entry of the Gladiator.ogg-3619582d230ef829a7ec22ad4c421b9b.oggvorbisstr"]
 
 [params]
 

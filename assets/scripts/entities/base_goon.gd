@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var FRICTION: int = 10
 @export var MAX_HEALTH = 3
 @export var GRAVITY = 980
+@onready var damage_taken = $DamageTaken
 
 var direction = -1
 var stunned = false
@@ -36,6 +37,7 @@ func Damage(value, knockDirection):
 	
 	health -= value
 	stunned = true
+	damage_taken.play()
 	if health < 0 :
 		Kill()
 		return
