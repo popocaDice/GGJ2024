@@ -36,6 +36,7 @@ sprite_frames = ExtResource("3_2wk5f")
 frame_progress = 0.84078
 
 [node name="Controles" type="Label" parent="."]
+layout_mode = 0
 offset_left = 98.0
 offset_top = 11.0
 offset_right = 224.0
@@ -45,6 +46,7 @@ theme_override_font_sizes/font_size = 18
 text = "Controles"
 
 [node name="AtirarTorta" type="Label" parent="."]
+layout_mode = 0
 offset_left = 51.0
 offset_top = 60.0
 offset_right = 134.0
