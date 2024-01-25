@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://djlsynqmlmpee"]
+[gd_scene load_steps=5 format=3 uid="uid://djlsynqmlmpee"]
 
 [ext_resource type="Script" path="res://assets/scripts/entities/jogadorTEST.gd" id="1_xhm5r"]
 [ext_resource type="SpriteFrames" uid="uid://bo6btum4kwyl3" path="res://assets/animations/palhaco.tres" id="2_o3fh2"]
+[ext_resource type="AudioStream" uid="uid://b1tdh1ni45j13" path="res://assets/sounds/sfx/player/jumpsound.wav" id="3_h4ce4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfk41"]
 size = Vector2(14, 21.5)
@@ -23,3 +24,7 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10.75)
 shape = SubResource("RectangleShape2D_hfk41")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_h4ce4")
+volume_db = -10.0
