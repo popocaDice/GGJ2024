@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://du4xbfe1qrs6u"]
+[gd_scene load_steps=20 format=3 uid="uid://c7sjla36d7a0l"]
 
 [ext_resource type="Script" path="res://assets/scripts/entities/big_goon.gd" id="1_e55vg"]
 [ext_resource type="Texture2D" uid="uid://dkr70y17fls0q" path="res://assets/sprites/characters/GGJ2024Characters-Sheet.png" id="1_k66js"]
