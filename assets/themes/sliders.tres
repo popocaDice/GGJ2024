@@ -1,9 +1,16 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bggidcjldd4fy"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bggidcjldd4fy"]
 
 [ext_resource type="Texture2D" uid="uid://cb610l6l4mfjv" path="res://assets/sprites/GUI/clown_head.png" id="1_er8px"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6u0h"]
+bg_color = Color(0.301961, 0.0352941, 0.94902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_54ofk"]
+bg_color = Color(0.301961, 0.0352941, 0.94902, 1)
+
 [resource]
 HSlider/icons/grabber = ExtResource("1_er8px")
-HSlider/icons/grabber_highlight = null
-HSlider/styles/grabber_area = null
-HSlider/styles/grabber_area_highlight = null
+HSlider/icons/grabber_disabled = ExtResource("1_er8px")
+HSlider/icons/grabber_highlight = ExtResource("1_er8px")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_d6u0h")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_54ofk")
