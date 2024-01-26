@@ -18,6 +18,7 @@ size = Vector2(21, 34)
 
 [node name="BaseGoon" type="CharacterBody2D" groups=["canHurt"]]
 z_index = 7
+collision_layer = 3
 collision_mask = 255
 script = ExtResource("1_2i3rb")
 MAX_SPEED = 20
@@ -25,9 +26,8 @@ MAX_SPEED = 20
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = ExtResource("2_i7khy")
-animation = &"Ataque"
+animation = &"Pulo"
 autoplay = "Andando"
-frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10.5)

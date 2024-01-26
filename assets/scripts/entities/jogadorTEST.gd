@@ -1,11 +1,11 @@
 extends CharacterBody2D
-@export var JUMP_FORCE: int = -130
-@export var JUMP_RELEASE_FORCE: int = -70
-@export var MAX_SPEED: int = 50
-@export var ACCELERATION: int = 10
-@export var FRICTION: int = 10
-@export var GRAVITY: int = 4
-@export var ADDITIONAL_FALL_GRAVITY: int = 4
+@export var JUMP_FORCE: int = -220
+@export var JUMP_RELEASE_FORCE: int = -50
+@export var MAX_SPEED: int = 120
+@export var ACCELERATION: int = 30
+@export var FRICTION: int = 20
+@export var GRAVITY: int = 5
+@export var ADDITIONAL_FALL_GRAVITY: int = 8
 @export var MAX_HEALTH = 3
 
 @onready var animatedSprite = $AnimatedSprite2D
