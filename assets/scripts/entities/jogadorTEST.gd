@@ -11,6 +11,7 @@ extends CharacterBody2D
 @onready var animatedSprite = $AnimatedSprite2D
 @onready var pieProjectile = preload("res://assets/prefabs/projectiles/Pie.tscn")
 @onready var jump_sound = $JumpSound
+@onready var deathscreen = $Deathscreen
 
 var jumpInput = false
 var attack = false
@@ -20,6 +21,7 @@ var health
 
 func _ready():
 	health = MAX_HEALTH
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 func _physics_process(delta):
 	apply_gravity()
@@ -110,6 +112,7 @@ func Damage(value, knockDirection):
 	set_collision_layer_value(5, true)
 	
 func Kill():
-	pass
+	deathscreen.show()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cp5t8kax8cpx0"]
+[gd_scene load_steps=8 format=3 uid="uid://cp5t8kax8cpx0"]
 
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="1_djbtr"]
 [ext_resource type="PackedScene" uid="uid://djlsynqmlmpee" path="res://assets/prefabs/entities/jogador.tscn" id="1_nry3c"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" path="res://assets/prefabs/scenery.tscn" id="5_d5tvi"]
 [ext_resource type="PackedScene" uid="uid://c7sjla36d7a0l" path="res://assets/prefabs/entities/big_goon.tscn" id="6_lpmxx"]
 [ext_resource type="PackedScene" uid="uid://da0trhk7fv7s2" path="res://assets/prefabs/entities/base_goon.tscn" id="6_pr1x8"]
+[ext_resource type="PackedScene" uid="uid://bo3jx8bslydcy" path="res://assets/scenes/menu_pausa.tscn" id="7_j7jnv"]
 
 [node name="Mundo" type="Node2D"]
 
@@ -22,6 +23,14 @@ limit_left = -185
 limit_top = -115
 limit_right = 980
 limit_bottom = 295
+
+[node name="MenuPausa2" parent="Jogador/Camera2D" instance=ExtResource("7_j7jnv")]
+process_mode = 3
+visible = false
+offset_left = 125.0
+offset_top = -15.0
+offset_right = 125.0
+offset_bottom = -15.0
 
 [node name="BaseGoon" parent="." instance=ExtResource("6_pr1x8")]
 position = Vector2(198, 162)

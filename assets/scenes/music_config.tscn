@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://76ieb8b6o624" path="res://assets/sounds/sfx/tart/hit.wav" id="6_jpcn5"]
 
 [node name="music_config" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,10 +22,10 @@ grow_vertical = 2
 
 [node name="BGM" type="HSlider" parent="."]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 65.0
-offset_right = 167.0
-offset_bottom = 89.0
+offset_left = 5.0
+offset_top = 69.0
+offset_right = 162.0
+offset_bottom = 93.0
 theme = ExtResource("1_r4u6n")
 max_value = 1.0
 step = 0.001
@@ -42,10 +43,10 @@ text = "BGM"
 
 [node name="SFX" type="HSlider" parent="."]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 95.0
-offset_right = 164.0
-offset_bottom = 119.0
+offset_left = 8.0
+offset_top = 107.0
+offset_right = 161.0
+offset_bottom = 131.0
 theme = ExtResource("1_r4u6n")
 max_value = 1.0
 step = 0.001
@@ -100,10 +101,10 @@ text = "MENU"
 
 [node name="Testar SFX" type="Button" parent="."]
 layout_mode = 0
-offset_left = 71.0
-offset_top = 118.0
-offset_right = 119.0
-offset_bottom = 138.0
+offset_left = 107.0
+offset_top = 136.0
+offset_right = 155.0
+offset_bottom = 156.0
 theme_override_font_sizes/font_size = 8
 text = "Testar SFX"
 
