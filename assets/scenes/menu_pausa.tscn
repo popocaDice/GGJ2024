@@ -1,13 +1,16 @@
-[gd_scene format=3 uid="uid://bo3jx8bslydcy"]
+[gd_scene load_steps=2 format=3 uid="uid://bo3jx8bslydcy"]
+
+[ext_resource type="Script" path="res://assets/scripts/configs/menu_pausa.gd" id="1_pwurk"]
 
 [node name="MenuPausa" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -62.0
-offset_top = -36.0
-offset_right = -62.0
-offset_bottom = -36.0
+offset_left = 107.0
+offset_top = 59.0
+offset_right = 107.0
+offset_bottom = 59.0
 size_flags_horizontal = 0
+script = ExtResource("1_pwurk")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -26,3 +29,6 @@ text = "Continuar"
 [node name="menuPrincipal" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Menu Principal"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/menuPrincipal" to="." method="_on_menu_principal_pressed"]

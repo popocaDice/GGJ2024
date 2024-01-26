@@ -1,4 +1,5 @@
 extends HSlider
+@onready var test_sound = $"../TestSound"
 
 @export
 var bus_name: String
@@ -17,3 +18,11 @@ func _on_value_changed(value: float ) -> void:
 		bus_index,
 		linear_to_db(value)
 	)
+
+
+func _on_testar_sfx_pressed():
+	test_sound.play()
+
+
+func _on_menu_pressed():
+	get_tree().change_scene_to_file("res://assets/scenes/menu.tscn")

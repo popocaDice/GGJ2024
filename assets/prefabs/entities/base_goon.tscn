@@ -83,6 +83,7 @@ shape = SubResource("RectangleShape2D_tw5dm")
 
 [node name="DamageTaken" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_x67wo")
+bus = &"SFX"
 
 [connection signal="body_exited" from="LedgeRight" to="." method="_on_ledge_right"]
 [connection signal="body_exited" from="LedgeLeft" to="." method="_on_ledge_left"]
