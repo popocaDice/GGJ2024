@@ -44,4 +44,5 @@ focus_neighbor_bottom = NodePath("../iniciar")
 text = "SAIR"
 
 [connection signal="pressed" from="VBoxContainer/iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="VBoxContainer/opcoes" to="." method="_on_opcoes_pressed"]
 [connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]

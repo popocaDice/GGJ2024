@@ -1,6 +1,5 @@
 extends Control
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$VBoxContainer/iniciar.grab_focus()
@@ -20,3 +19,7 @@ func _on_iniciar_pressed():
 func _on_sair_pressed():
 	get_tree().quit()
 	pass # Replace with function body.
+
+
+func _on_opcoes_pressed():
+	get_tree().change_scene_to_file("res://assets/scenes/music_config.tscn")
