@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cp5t8kax8cpx0"]
 
-[ext_resource type="PackedScene" uid="uid://dlvmwkkn73bmj" path="res://assets/prefabs/background.tscn" id="1_djbtr"]
+[ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="1_djbtr"]
 [ext_resource type="PackedScene" uid="uid://djlsynqmlmpee" path="res://assets/prefabs/entities/jogador.tscn" id="1_nry3c"]
 [ext_resource type="PackedScene" uid="uid://p44bqikk7pi1" path="res://assets/prefabs/camera_2d.tscn" id="4_jo5n6"]
 [ext_resource type="PackedScene" uid="uid://daruwf226wgs5" path="res://assets/prefabs/scenery.tscn" id="5_d5tvi"]
