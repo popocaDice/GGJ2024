@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0yeubolsrbmy"]
+
+[ext_resource type="Script" path="res://assets/scripts/configs/deathscreen.gd" id="1_xgrn0"]
+[ext_resource type="FontFile" uid="uid://dc68dwhxpr0n6" path="res://assets/fonts/04B_30__.TTF" id="2_arx0g"]
+
+[node name="Deathscreen" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xgrn0")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 121.0
+offset_right = 191.0
+offset_bottom = 152.0
+theme_override_colors/icon_normal_color = Color(0.345098, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.835294, 0, 0, 1)
+text = "MENU"
+
+[node name="Reiniciar" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 86.0
+offset_right = 205.0
+offset_bottom = 117.0
+theme_override_colors/icon_normal_color = Color(0.47451, 0.619608, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.184314, 0, 1)
+text = "REINICIAR"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 58.0
+offset_right = 273.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.505882, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_arx0g")
+text = "Voce foi de base!"
+
+[connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Panel/Reiniciar" to="." method="_on_reiniciar_pressed"]

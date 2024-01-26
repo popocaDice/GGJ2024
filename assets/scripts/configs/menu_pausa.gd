@@ -1,6 +1,6 @@
 extends Control
 
-@onready var Menu = preload("res://assets/scenes/menu.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	visible = false
@@ -15,10 +15,11 @@ func _unhandled_input(event):
 		get_tree().paused = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		visible = true
+		
 func _on_continuar_pressed():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	get_tree().paused = false
 	visible = false
 	
 func _on_menu_principal_pressed():
-	get_tree().change_scene_to_file(Menu)
+	get_tree().change_scene_to_file("res://assets/scenes/menu.tscn")
