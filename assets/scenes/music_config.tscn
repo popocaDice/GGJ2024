@@ -33,10 +33,10 @@ bus_name = "BGM"
 
 [node name="Label" type="Label" parent="BGM"]
 layout_mode = 0
-offset_left = 66.0
-offset_top = -8.0
-offset_right = 106.0
-offset_bottom = 18.0
+offset_left = 67.0
+offset_top = -12.0
+offset_right = 107.0
+offset_bottom = 5.0
 theme = ExtResource("3_5x4y5")
 text = "BGM"
 
@@ -54,10 +54,10 @@ bus_name = "SFX"
 
 [node name="Label" type="Label" parent="SFX"]
 layout_mode = 0
-offset_left = 67.0
-offset_top = -9.0
-offset_right = 107.0
-offset_bottom = 17.0
+offset_left = 69.0
+offset_top = -11.0
+offset_right = 109.0
+offset_bottom = 6.0
 theme = ExtResource("3_5x4y5")
 text = "SFX"
 
@@ -88,7 +88,7 @@ offset_left = 2.0
 offset_top = 149.0
 offset_right = 57.0
 offset_bottom = 180.0
-text = "Voltar"
+text = "VOLTAR"
 
 [node name="Menu" type="Button" parent="."]
 layout_mode = 0
@@ -96,7 +96,7 @@ offset_left = 265.0
 offset_top = 150.0
 offset_right = 322.0
 offset_bottom = 181.0
-text = "Menu "
+text = "MENU"
 
 [node name="Testar SFX" type="Button" parent="."]
 layout_mode = 0
