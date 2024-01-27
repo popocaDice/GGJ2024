@@ -32,6 +32,14 @@ func _on_area_2d_body_entered(body):
 	$AnimatedSprite2D.flip_h = not $AnimatedSprite2D.flip_h
 	$AnimatedSprite2D.offset.x += 7*direction
 	$Area2D.call_deferred("queue_free")
+	
 	if body.is_in_group("canHurt"):
+		
 		body.Damage(damage, direction)
+		
+	if body.is_in_group("door"):
+		
+		print_debug("porta")
+		body.Open(direction)
+		
 	call_deferred("reparent", body)

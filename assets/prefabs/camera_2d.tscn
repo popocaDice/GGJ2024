@@ -1,7 +1,84 @@
-[gd_scene format=3 uid="uid://p44bqikk7pi1"]
+[gd_scene load_steps=8 format=3 uid="uid://p44bqikk7pi1"]
+
+[ext_resource type="Script" path="res://assets/scripts/healthBar.gd" id="1_8pfcr"]
+[ext_resource type="Texture2D" uid="uid://ktlo0evw7731" path="res://assets/sprites/GUI/HealthBalloon1.png" id="2_bedhv"]
+[ext_resource type="Texture2D" uid="uid://cf7qbyey2igya" path="res://assets/sprites/GUI/HealthBalloon2.png" id="3_8oejd"]
+[ext_resource type="Texture2D" uid="uid://bgcr8xp558j82" path="res://assets/sprites/GUI/HealthBalloon3.png" id="4_1w0ty"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_xwmny"]
+frames = 3
+pause = true
+one_shot = true
+frame_0/texture = ExtResource("2_bedhv")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("3_8oejd")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("4_1w0ty")
+frame_2/duration = 0.1
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_odas5"]
+frames = 3
+pause = true
+one_shot = true
+frame_0/texture = ExtResource("2_bedhv")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("3_8oejd")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("4_1w0ty")
+frame_2/duration = 0.1
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_b6esx"]
+frames = 3
+pause = true
+one_shot = true
+frame_0/texture = ExtResource("2_bedhv")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("3_8oejd")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("4_1w0ty")
+frame_2/duration = 0.1
 
 [node name="Camera2D" type="Camera2D"]
 position = Vector2(288, 88)
 zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 editor_draw_limits = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="HealthBar" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -144.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_8pfcr")
+
+[node name="Health 1" type="TextureRect" parent="UI/HealthBar"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 48.0
+offset_bottom = 60.0
+texture = SubResource("AnimatedTexture_xwmny")
+
+[node name="Health 2" type="TextureRect" parent="UI/HealthBar"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 12.0
+offset_right = 96.0
+offset_bottom = 60.0
+texture = SubResource("AnimatedTexture_odas5")
+
+[node name="Health 3" type="TextureRect" parent="UI/HealthBar"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 12.0
+offset_right = 144.0
+offset_bottom = 60.0
+texture = SubResource("AnimatedTexture_b6esx")

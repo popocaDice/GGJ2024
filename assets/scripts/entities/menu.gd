@@ -14,7 +14,7 @@ func _process(_delta):
 
 
 func _on_iniciar_pressed():
-	get_tree().change_scene_to_file("res://assets/scenes/mundo.tscn")
+	get_tree().change_scene_to_file("res://assets/scenes/castle_tutorial.tscn")
 	pass # Replace with function body.
 
 

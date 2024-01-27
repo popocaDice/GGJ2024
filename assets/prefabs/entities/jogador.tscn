@@ -17,7 +17,7 @@ script = ExtResource("1_xhm5r")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = ExtResource("2_o3fh2")
-animation = &"Torta"
+animation = &"Balao"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

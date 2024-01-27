@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var GRAVITY: int = 5
 @export var ADDITIONAL_FALL_GRAVITY: int = 8
 @export var MAX_HEALTH = 3
+@export var BALLOON_FALL_SPEED = 70
 
 @onready var animatedSprite = $AnimatedSprite2D
 @onready var pieProjectile = preload("res://assets/prefabs/projectiles/Pie.tscn")
@@ -18,6 +19,8 @@ var attack = false
 var stunned = false
 var unstoppableAnimation = false
 var health
+
+@export var hasBaloon = false
 
 func _ready():
 	health = MAX_HEALTH
@@ -64,6 +67,11 @@ func _physics_process(delta):
 
 		if velocity.y > 0:
 			velocity.y += ADDITIONAL_FALL_GRAVITY
+		
+		if Input.is_action_pressed("Pulo") and hasBaloon:
+			velocity.y = min(velocity.y, BALLOON_FALL_SPEED)
+			if velocity.y >= 0: queueAnimation("Balao", false)
+			
 	var was_in_air = is_on_floor()
 	move_and_slide()
 	var just_landed = is_on_floor() and not was_in_air
@@ -104,6 +112,7 @@ func Damage(value, knockDirection):
 	if health < 0 :
 		Kill()
 		return
+	$Camera2D/UI/HealthBar.Damage(value)
 	queueAnimation("Dano", false)
 	velocity = Vector2(30*knockDirection, -50)
 	set_collision_layer_value(5, false)
