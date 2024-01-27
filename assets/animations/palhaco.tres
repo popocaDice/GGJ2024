@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://bo6btum4kwyl3"]
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://bo6btum4kwyl3"]
 
 [ext_resource type="Texture2D" uid="uid://dkr70y17fls0q" path="res://assets/sprites/characters/GGJ2024Characters-Sheet.png" id="1_v6og1"]
 
@@ -9,6 +9,10 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_jnc4w"]
 atlas = ExtResource("1_v6og1")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3wgk"]
+atlas = ExtResource("1_v6og1")
+region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o4vmm"]
 atlas = ExtResource("1_v6og1")
@@ -49,6 +53,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Andando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3wgk")
+}],
+"loop": true,
+"name": &"Balao",
 "speed": 5.0
 }, {
 "frames": [{
