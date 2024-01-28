@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://bo6btum4kwyl3"]
+[gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://bo6btum4kwyl3"]
 
 [ext_resource type="Texture2D" uid="uid://dkr70y17fls0q" path="res://assets/sprites/characters/GGJ2024Characters-Sheet.png" id="1_v6og1"]
 
@@ -25,6 +25,22 @@ region = Rect2(224, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_f6q75"]
 atlas = ExtResource("1_v6og1")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng6td"]
+atlas = ExtResource("1_v6og1")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbf0o"]
+atlas = ExtResource("1_v6og1")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsndr"]
+atlas = ExtResource("1_v6og1")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4ucw"]
+atlas = ExtResource("1_v6og1")
+region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_emqr2"]
 atlas = ExtResource("1_v6og1")
@@ -81,6 +97,23 @@ animations = [{
 "loop": true,
 "name": &"Parado",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng6td")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbf0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsndr")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_o4ucw")
+}],
+"loop": false,
+"name": &"Parry",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
