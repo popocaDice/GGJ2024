@@ -1,4 +1,5 @@
 extends CharacterBody2D
+#variáveis
 @export var JUMP_FORCE: int = -220
 @export var JUMP_RELEASE_FORCE: int = -50
 @export var MAX_SPEED: int = 120
@@ -8,12 +9,12 @@ extends CharacterBody2D
 @export var ADDITIONAL_FALL_GRAVITY: int = 8
 @export var MAX_HEALTH = 3
 @export var BALLOON_FALL_SPEED = 70
-
+#Instâncias
 @onready var animatedSprite = $AnimatedSprite2D
 @onready var pieProjectile = preload("res://assets/prefabs/projectiles/Pie.tscn")
 @onready var jump_sound = $JumpSound
 @onready var deathscreen = $Deathscreen
-
+#booleanas:
 var jumpInput = false
 var stunned = false
 var parry = false
