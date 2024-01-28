@@ -13,6 +13,8 @@ extends CharacterBody2D
 @onready var animatedSprite = $AnimatedSprite2D
 @onready var pieProjectile = preload("res://assets/prefabs/projectiles/Pie.tscn")
 @onready var jump_sound = $JumpSound
+@onready var yikes = $Yikes
+
 #booleanas:
 var jumpInput = false
 var stunned = false
@@ -125,6 +127,7 @@ func Damage(value, knockDirection):
 			if body.is_in_group("canHurt"):
 				body.Damage(1, 1 if $AnimatedSprite2D.flip_h else -1)
 		return
+	yikes.play()
 	health -= value
 	stunned = true
 	if health < 0 :
