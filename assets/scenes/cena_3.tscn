@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://fqsxbc5dapt"]
+[gd_scene load_steps=7 format=3 uid="uid://fqsxbc5dapt"]
 
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="1_hkjep"]
 [ext_resource type="PackedScene" uid="uid://daruwf226wgs5" path="res://assets/prefabs/scenery.tscn" id="2_aws0r"]
 [ext_resource type="PackedScene" uid="uid://djlsynqmlmpee" path="res://assets/prefabs/entities/jogador.tscn" id="3_8wnhb"]
 [ext_resource type="PackedScene" uid="uid://p44bqikk7pi1" path="res://assets/prefabs/camera_2d.tscn" id="4_7yn8x"]
 [ext_resource type="PackedScene" uid="uid://da0trhk7fv7s2" path="res://assets/prefabs/entities/base_goon.tscn" id="5_5fjj7"]
+[ext_resource type="PackedScene" uid="uid://eicnb77qgbwb" path="res://assets/prefabs/scene_loader.tscn" id="6_1y6dv"]
 
 [node name="Cena3" type="Node2D"]
 
@@ -36,3 +37,8 @@ position = Vector2(603, 144)
 
 [node name="BaseGoon4" parent="." instance=ExtResource("5_5fjj7")]
 position = Vector2(855, 126)
+
+[node name="SceneLoader" parent="." instance=ExtResource("6_1y6dv")]
+position = Vector2(963, 36)
+scale = Vector2(1, 2.88)
+sceneName = "cena_4"

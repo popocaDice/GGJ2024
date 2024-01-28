@@ -13,7 +13,6 @@ extends CharacterBody2D
 @onready var animatedSprite = $AnimatedSprite2D
 @onready var pieProjectile = preload("res://assets/prefabs/projectiles/Pie.tscn")
 @onready var jump_sound = $JumpSound
-@onready var deathscreen = $Deathscreen
 #booleanas:
 var jumpInput = false
 var stunned = false
@@ -55,7 +54,7 @@ func _physics_process(delta):
 		queueAnimation("Torta", true)
 		attackAnimation()
 		
-	if Input.is_action_just_pressed("Parry") and not (unstoppableAnimation or stunned):
+	if hasBaloon and Input.is_action_just_pressed("Parry") and not (unstoppableAnimation or stunned):
 		queueAnimation("Parry", true)
 		parryAnimation()
 	
@@ -74,7 +73,7 @@ func _physics_process(delta):
 		if velocity.y > 0:
 			velocity.y += ADDITIONAL_FALL_GRAVITY
 		
-		if Input.is_action_pressed("Pulo") and hasBaloon:
+		if hasBaloon and Input.is_action_pressed("Pulo"):
 			velocity.y = min(velocity.y, BALLOON_FALL_SPEED)
 			if velocity.y >= 0: queueAnimation("Balao", false)
 			
@@ -140,7 +139,7 @@ func Damage(value, knockDirection):
 	set_collision_layer_value(5, true)
 	
 func Kill():
-	deathscreen.show()
+	$Camera2D/UI/DeathScreen.show()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 

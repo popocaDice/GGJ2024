@@ -69,7 +69,7 @@ func Damage(value, knockDirection):
 	set_collision_layer_value(1, false)
 	await get_tree().create_timer(1).timeout
 	stunned = false
-	$AnimatedSprite2D.play("Andando")
+	if not isCharging: $AnimatedSprite2D.play("Andando")
 	set_collision_layer_value(1, true)
 	
 
@@ -105,9 +105,9 @@ func Stun():
 	stunned = false
 	$AnimatedSprite2D.play("Parado")
 	await get_tree().create_timer(CHARGE_COOLDOWN).timeout
-	$AnimatedSprite2D.play("Andando")
 	$AnimatedSprite2D.speed_scale = 1
 	speed = MAX_SPEED
+	$AnimatedSprite2D.play("Andando")
 	canCharge = true
 
 func _on_ledge_left(_body):
