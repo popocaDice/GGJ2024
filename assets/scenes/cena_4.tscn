@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dck4d34n42iw8"]
 
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="1_o3m16"]
-[ext_resource type="PackedScene" uid="uid://daruwf226wgs5" path="res://assets/prefabs/scenery.tscn" id="2_g2016"]
+[ext_resource type="PackedScene" uid="uid://bow5bapjqv63p" path="res://assets/prefabs/scenery.tscn" id="2_g2016"]
 [ext_resource type="PackedScene" uid="uid://djlsynqmlmpee" path="res://assets/prefabs/entities/jogador.tscn" id="3_q5g1u"]
 [ext_resource type="PackedScene" uid="uid://p44bqikk7pi1" path="res://assets/prefabs/camera_2d.tscn" id="4_t1f65"]
-[ext_resource type="PackedScene" uid="uid://eicnb77qgbwb" path="res://assets/prefabs/scene_loader.tscn" id="5_755sd"]
+[ext_resource type="PackedScene" uid="uid://ivlwmmptfaoa" path="res://assets/prefabs/scene_loader.tscn" id="5_755sd"]
 
 [node name="Cena4" type="Node2D"]
 

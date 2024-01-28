@@ -22,4 +22,5 @@ func _on_continuar_pressed():
 	visible = false
 	
 func _on_menu_principal_pressed():
+	get_tree().paused = false
 	get_tree().change_scene_to_file("res://assets/scenes/menu.tscn")
