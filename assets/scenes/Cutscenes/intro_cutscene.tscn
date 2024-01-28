@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cxci8hge446q2"]
+[gd_scene load_steps=61 format=3 uid="uid://cxci8hge446q2"]
 
 [ext_resource type="Texture2D" uid="uid://v3byq2skhn23" path="res://assets/sprites/Cutscenes.png" id="1_gbrom"]
 [ext_resource type="Script" path="res://assets/scripts/intro_cutscene.gd" id="1_mqkc6"]
@@ -6,10 +6,12 @@
 [ext_resource type="TileSet" uid="uid://2jnxgrtr8d05" path="res://assets/prefabs/tilesets/Blocks.tres" id="3_5u3ky"]
 [ext_resource type="Texture2D" uid="uid://dkr70y17fls0q" path="res://assets/sprites/characters/GGJ2024Characters-Sheet.png" id="4_px7vf"]
 [ext_resource type="PackedScene" uid="uid://bow5bapjqv63p" path="res://assets/prefabs/scenery.tscn" id="6_lqv8v"]
+[ext_resource type="AudioStream" uid="uid://c3nsegnghgpa" path="res://assets/sounds/public/public crowd.mp3" id="6_v1qj8"]
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="7_g5g44"]
+[ext_resource type="AudioStream" uid="uid://dkk53h17ksx2q" path="res://assets/sounds/public/Public Laugh.wav" id="7_njvtr"]
 [ext_resource type="AudioStream" uid="uid://dp63rksb0egko" path="res://assets/sounds/bgm/Entry of the Gladiator.mp3" id="8_btx4k"]
 [ext_resource type="AudioStream" uid="uid://76ieb8b6o624" path="res://assets/sounds/sfx/tart/hit.wav" id="9_iwq30"]
-[ext_resource type="AudioStream" uid="uid://drargx7n8wuo1" path="res://assets/sounds/temp/270327__littlerobotsoundfactory__hit_00.wav" id="10_3vaym"]
+[ext_resource type="AudioStream" uid="uid://drargx7n8wuo1" path="res://assets/sounds/temp/pew.wav" id="10_3vaym"]
 
 [sub_resource type="Gradient" id="Gradient_e6ccf"]
 offsets = PackedFloat32Array(0)
@@ -1492,7 +1494,6 @@ libraries = {
 autoplay = "intro"
 
 [node name="Scene 2" type="Node2D" parent="."]
-visible = false
 position = Vector2(-31.425, -56.61)
 
 [node name="Background" type="TileMap" parent="Scene 2"]
@@ -1532,6 +1533,14 @@ z_index = 10
 position = Vector2(157.425, 139.61)
 scale = Vector2(5.90625, 3.875)
 texture = SubResource("GradientTexture2D_8xb7k")
+
+[node name="Plateia" type="AudioStreamPlayer2D" parent="Scene 2"]
+stream = ExtResource("6_v1qj8")
+bus = &"SFX"
+
+[node name="Risada" type="AudioStreamPlayer2D" parent="Scene 2"]
+stream = ExtResource("7_njvtr")
+bus = &"SFX"
 
 [node name="Scene 3" type="Node2D" parent="."]
 visible = false

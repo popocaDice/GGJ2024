@@ -84,6 +84,7 @@ func Kill():
 func Attack():
 	
 	set_collision_layer_value(1, false)
+	$Step.play()
 	isCharging = true
 	canCharge = false
 	speed = 0
@@ -93,6 +94,8 @@ func Attack():
 	
 func Stun():
 	
+	$Step.stop()
+	$Hit.play()
 	set_collision_layer_value(1, true)
 	$ChargeHitbox.monitoring = false
 	isCharging = false

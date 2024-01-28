@@ -1,0 +1,128 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx5nwlp2q4opb"]
+
+[ext_resource type="Script" path="res://assets/scripts/configs/menu_creditos.gd" id="1_yvte5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uj7eu"]
+line_spacing = -5.0
+font_size = 8
+
+[sub_resource type="Animation" id="Animation_u8ko6"]
+resource_name = "new_animation"
+length = 20.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 20)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(180, -0.25, 0, 0.25, 0, -270, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 20)
+}
+
+[sub_resource type="Animation" id="Animation_6he33"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(180, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ij8q"]
+_data = {
+"RESET": SubResource("Animation_6he33"),
+"new_animation": SubResource("Animation_u8ko6")
+}
+
+[node name="Creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yvte5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 324.0
+offset_bottom = 451.0
+theme_override_font_sizes/font_size = 8
+text = "Som de pulo por CoolSoundFX
+-
+https://www.youtube.com/watch?v=BT0C7ZI2m7Y
+
+
+
+Som de contato da torta por r0dg
+-
+https://www.youtube.com/watch?v=JcG_ugrzfHE
+
+
+
+Musica de circo extraida de um MIDI por bitMidi
+-
+https://bitmidi.com/entry-of-the-gladiators-march-of-triumph-mid
+
+
+
+Som de espada por BAROGS GAMING
+-
+https://www.youtube.com/watch?v=wURp8_kO2m8
+
+
+
+Som de platéia por Milo Magnusson
+-
+https://www.youtube.com/watch?v=8tFpb-1sA9g
+
+
+
+Som de platéia rindo por dilwale Ravi Raimbo
+-
+https://www.youtube.com/watch?v=3UrJ6K6_9Cw
+
+
+
+
+Todos os outros assets de autoria da própria equipe"
+label_settings = SubResource("LabelSettings_uj7eu")
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3ij8q")
+}
+autoplay = "new_animation"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://x85gbgeh02df"]
+[gd_scene load_steps=11 format=3 uid="uid://x85gbgeh02df"]
 
-[ext_resource type="PackedScene" path="res://assets/prefabs/scenery.tscn" id="1_0stgh"]
+[ext_resource type="PackedScene" uid="uid://bow5bapjqv63p" path="res://assets/prefabs/scenery.tscn" id="1_0stgh"]
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="2_eafyo"]
 [ext_resource type="PackedScene" uid="uid://djlsynqmlmpee" path="res://assets/prefabs/entities/jogador.tscn" id="2_pq7iw"]
 [ext_resource type="PackedScene" uid="uid://p44bqikk7pi1" path="res://assets/prefabs/camera_2d.tscn" id="3_a0hx4"]
-[ext_resource type="PackedScene" path="res://assets/prefabs/door.tscn" id="5_t4r38"]
-[ext_resource type="PackedScene" path="res://assets/prefabs/scene_loader.tscn" id="6_eo1fk"]
+[ext_resource type="PackedScene" uid="uid://b8w6ot2jhb4xu" path="res://assets/prefabs/door.tscn" id="5_t4r38"]
+[ext_resource type="PackedScene" uid="uid://ivlwmmptfaoa" path="res://assets/prefabs/scene_loader.tscn" id="6_eo1fk"]
 [ext_resource type="Texture2D" uid="uid://dkr70y17fls0q" path="res://assets/sprites/characters/GGJ2024Characters-Sheet.png" id="7_0w6be"]
 [ext_resource type="Script" path="res://assets/scripts/Dica.gd" id="8_uj278"]
+[ext_resource type="AudioStream" uid="uid://eyasgsk7cr5y" path="res://assets/sounds/bgm/March of the Bravery bit.wav" id="9_clkjl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bkg4"]
 size = Vector2(54, 108)
@@ -107,5 +108,9 @@ offset_top = -36.0
 offset_right = -50.0
 offset_bottom = -13.0
 text = "APERTE  X!"
+
+[node name="Song" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_clkjl")
+autoplay = true
 
 [connection signal="body_entered" from="Dica" to="Dica" method="_on_body_entered"]

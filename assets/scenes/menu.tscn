@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcp86ykns8uyb"]
+[gd_scene load_steps=3 format=3 uid="uid://dcp86ykns8uyb"]
 
 [ext_resource type="Script" path="res://assets/scripts/entities/menu.gd" id="1_ifwo3"]
+[ext_resource type="AudioStream" uid="uid://dp63rksb0egko" path="res://assets/sounds/bgm/Entry of the Gladiator.mp3" id="2_cb5nv"]
 
 [node name="Menu" type="Control"]
 process_mode = 3
@@ -48,7 +49,11 @@ layout_mode = 2
 focus_neighbor_bottom = NodePath("../iniciar")
 text = "SAIR"
 
+[node name="Song" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_cb5nv")
+
 [connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timer_timeout"]
 [connection signal="pressed" from="VBoxContainer/iniciar" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="VBoxContainer/opcoes" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]

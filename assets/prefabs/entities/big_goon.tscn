@@ -1,7 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://c7sjla36d7a0l"]
+[gd_scene load_steps=22 format=3 uid="uid://c7sjla36d7a0l"]
 
 [ext_resource type="Script" path="res://assets/scripts/entities/big_goon.gd" id="1_e55vg"]
 [ext_resource type="Texture2D" uid="uid://dkr70y17fls0q" path="res://assets/sprites/characters/GGJ2024Characters-Sheet.png" id="1_k66js"]
+[ext_resource type="AudioStream" uid="uid://b8xe6p5pv32ga" path="res://assets/sounds/sfx/enemies/Heavy Walk.wav" id="3_r42b6"]
+[ext_resource type="AudioStream" uid="uid://76ieb8b6o624" path="res://assets/sounds/sfx/tart/hit.wav" id="4_x5axc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_snk78"]
 atlas = ExtResource("1_k66js")
@@ -200,6 +202,13 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChargeHitbox"]
 position = Vector2(0, -14)
 shape = SubResource("RectangleShape2D_0t7nh")
+
+[node name="Step" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_r42b6")
+bus = &"SFX"
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_x5axc")
 
 [connection signal="body_exited" from="LedgeRight" to="." method="_on_ledge_right"]
 [connection signal="body_exited" from="LedgeLeft" to="." method="_on_ledge_left"]

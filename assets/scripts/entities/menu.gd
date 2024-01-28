@@ -2,6 +2,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Song.play(15.0)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	$VBoxContainer/iniciar.grab_focus()
 	pass # Replace with function body.
@@ -25,8 +26,12 @@ func _on_sair_pressed():
 
 
 func _on_opcoes_pressed():
-	get_tree().change_scene_to_file("res://assets/scenes/music_config.tscn")
+	get_tree().change_scene_to_file("res://assets/prefabs/UI/music_config.tscn")
 
 
 func _on_idle_timer_timeout():
 	get_tree().change_scene_to_file("res://assets/scenes/Cutscenes/intro_cutscene.tscn")
+
+
+func _on_creditos_pressed():
+	get_tree().change_scene_to_file("res://assets/prefabs/UI/menu_creditos.tscn")

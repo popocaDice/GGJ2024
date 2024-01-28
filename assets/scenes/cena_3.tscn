@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0r6nec1bbea6"]
+[gd_scene load_steps=8 format=3 uid="uid://d0r6nec1bbea6"]
 
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="1_hkjep"]
 [ext_resource type="PackedScene" uid="uid://bow5bapjqv63p" path="res://assets/prefabs/scenery.tscn" id="2_aws0r"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://p44bqikk7pi1" path="res://assets/prefabs/camera_2d.tscn" id="4_7yn8x"]
 [ext_resource type="PackedScene" uid="uid://da0trhk7fv7s2" path="res://assets/prefabs/entities/base_goon.tscn" id="5_5fjj7"]
 [ext_resource type="PackedScene" uid="uid://ivlwmmptfaoa" path="res://assets/prefabs/scene_loader.tscn" id="6_1y6dv"]
+[ext_resource type="AudioStream" uid="uid://eyasgsk7cr5y" path="res://assets/sounds/bgm/March of the Bravery bit.wav" id="7_vxkvi"]
 
 [node name="Cena3" type="Node2D"]
 
@@ -42,3 +43,7 @@ position = Vector2(855, 126)
 position = Vector2(963, 36)
 scale = Vector2(1, 2.88)
 sceneName = "cena_4"
+
+[node name="Song" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_vxkvi")
+autoplay = true

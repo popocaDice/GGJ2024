@@ -60,6 +60,7 @@ func Kill():
 func Attack():
 	stunned = true
 	$AnimatedSprite2D.play("Ataque")
+	$SwordSwing.play()
 	await $AnimatedSprite2D.frame_changed
 	if $AnimatedSprite2D.flip_h:
 		for body in $"AttackAreaRight".get_overlapping_bodies():

@@ -23,6 +23,12 @@ func _on_cutscene_animation_1_animation_finished(anim_name):
 	$"Scene 1".queue_free()
 	$"Scene 2/Scenery/Claudio".play("Idle")
 	$"Scene 2/AnimationPlayer".play("pan")
+	$"Scene 2/Plateia".play()
+	await get_tree().create_timer(3).timeout
+	$"Scene 2/Plateia".stream_paused = true
+	$"Scene 2/Risada".play()
+	await $"Scene 2/Risada".finished
+	$"Scene 2/Plateia".stream_paused = false
 
 
 func _on_claudio_animation_finished():

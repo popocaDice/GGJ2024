@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwythl454ymde"]
+[gd_scene load_steps=13 format=3 uid="uid://cwythl454ymde"]
 
 [ext_resource type="PackedScene" uid="uid://bow5bapjqv63p" path="res://assets/prefabs/scenery.tscn" id="1_vvt35"]
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="2_ohhqy"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ivlwmmptfaoa" path="res://assets/prefabs/scene_loader.tscn" id="7_d7can"]
 [ext_resource type="AudioStream" uid="uid://bdlc31hdpxw64" path="res://assets/sounds/sfx/pickupJingle.wav" id="7_v7wkp"]
 [ext_resource type="Script" path="res://assets/scripts/Dica.gd" id="8_yamec"]
+[ext_resource type="AudioStream" uid="uid://eyasgsk7cr5y" path="res://assets/sounds/bgm/March of the Bravery bit.wav" id="10_jpbwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8yrx"]
 size = Vector2(18, 18)
@@ -78,6 +79,10 @@ offset_bottom = -59.0
 text = "MANTENHA PULO
  PRESSIONADO!"
 horizontal_alignment = 1
+
+[node name="Song" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_jpbwd")
+autoplay = true
 
 [connection signal="body_entered" from="Balloon" to="Balloon" method="_on_body_entered"]
 [connection signal="body_entered" from="Dica" to="Dica" method="_on_body_entered"]
