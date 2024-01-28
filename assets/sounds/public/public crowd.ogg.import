@@ -1,0 +1,19 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOggVorbis"
+uid="uid://c3nsegnghgpa"
+path="res://.godot/imported/public crowd.ogg-3791f11528f2879ecd76a0d774067f44.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/public/public crowd.ogg"
+dest_files=["res://.godot/imported/public crowd.ogg-3791f11528f2879ecd76a0d774067f44.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOggVorbis"
+uid="uid://b8xe6p5pv32ga"
+path="res://.godot/imported/Heavy Walk.ogg-940adc6f9f713e113ea806f68533fd04.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/sfx/enemies/Heavy Walk.ogg"
+dest_files=["res://.godot/imported/Heavy Walk.ogg-940adc6f9f713e113ea806f68533fd04.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
