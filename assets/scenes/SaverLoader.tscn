@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://n28ptou4dxah"]
 
-[ext_resource type="Script" path="res://assets/scripts/Save.gd" id="1_fde1r"]
+[ext_resource type="Script" path="res://assets/scripts/SaveLoad.gd" id="1_fde1r"]
 
 [node name="SaverLoader" type="Node"]
 
