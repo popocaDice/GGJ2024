@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cth0wsmcxte4v"]
+[gd_scene load_steps=12 format=3 uid="uid://cth0wsmcxte4v"]
 
 [ext_resource type="PackedScene" uid="uid://daruwf226wgs5" path="res://assets/prefabs/scenery.tscn" id="1_vvt35"]
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="2_ohhqy"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://e718d30qvlj1" path="res://assets/sprites/backgrounds/props.png" id="5_jnjej"]
 [ext_resource type="Script" path="res://assets/scripts/Balloon.gd" id="5_r2u2l"]
 [ext_resource type="PackedScene" uid="uid://eicnb77qgbwb" path="res://assets/prefabs/scene_loader.tscn" id="7_d7can"]
+[ext_resource type="AudioStream" uid="uid://bdlc31hdpxw64" path="res://assets/sounds/sfx/pickupJingle.wav" id="7_v7wkp"]
 [ext_resource type="Script" path="res://assets/scripts/Dica.gd" id="8_yamec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8yrx"]
@@ -48,15 +49,9 @@ texture = ExtResource("5_jnjej")
 region_enabled = true
 region_rect = Rect2(144, 18, 18, 18)
 
-[node name="Jogador" parent="Balloon" instance=ExtResource("3_xmih0")]
-position = Vector2(54, 288)
-
-[node name="Camera2D" parent="Balloon/Jogador" instance=ExtResource("4_jmsdd")]
-position = Vector2(0, -70)
-limit_left = -330
-limit_top = -10
-limit_right = 405
-limit_bottom = 345
+[node name="Jingle" type="AudioStreamPlayer2D" parent="Balloon"]
+position = Vector2(-657, -171)
+stream = ExtResource("7_v7wkp")
 
 [node name="SceneLoader" parent="." instance=ExtResource("7_d7can")]
 position = Vector2(837, -68.44)

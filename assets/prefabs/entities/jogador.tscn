@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://djlsynqmlmpee"]
+[gd_scene load_steps=6 format=3 uid="uid://djlsynqmlmpee"]
 
 [ext_resource type="Script" path="res://assets/scripts/entities/jogadorTEST.gd" id="1_xhm5r"]
 [ext_resource type="SpriteFrames" uid="uid://bo6btum4kwyl3" path="res://assets/animations/palhaco.tres" id="2_o3fh2"]
 [ext_resource type="AudioStream" uid="uid://b1tdh1ni45j13" path="res://assets/sounds/sfx/player/jumpsound.wav" id="3_h4ce4"]
-[ext_resource type="PackedScene" uid="uid://c0yeubolsrbmy" path="res://assets/scenes/deathscreen.tscn" id="4_wywb8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfk41"]
 size = Vector2(14, 21.5)
@@ -33,14 +32,6 @@ shape = SubResource("RectangleShape2D_hfk41")
 stream = ExtResource("3_h4ce4")
 volume_db = -10.0
 bus = &"SFX"
-
-[node name="Deathscreen" parent="." instance=ExtResource("4_wywb8")]
-visible = false
-z_index = 0
-offset_left = -164.0
-offset_top = -118.0
-offset_right = -164.0
-offset_bottom = -118.0
 
 [node name="ParryArea" type="Area2D" parent="."]
 

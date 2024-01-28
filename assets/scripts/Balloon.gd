@@ -14,6 +14,7 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		body.velocity.y = 0
+		$Jingle.play()
 		$Sprite2D.queue_free()
 		Engine.time_scale = 0.05
 		Engine.physics_ticks_per_second = 5

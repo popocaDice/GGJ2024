@@ -1,19 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://p44bqikk7pi1"]
+[gd_scene load_steps=13 format=3 uid="uid://p44bqikk7pi1"]
 
 [ext_resource type="Script" path="res://assets/scripts/healthBar.gd" id="1_8pfcr"]
 [ext_resource type="Texture2D" uid="uid://ktlo0evw7731" path="res://assets/sprites/GUI/HealthBalloon1.png" id="2_bedhv"]
 [ext_resource type="Texture2D" uid="uid://cf7qbyey2igya" path="res://assets/sprites/GUI/HealthBalloon2.png" id="3_8oejd"]
 [ext_resource type="Texture2D" uid="uid://bgcr8xp558j82" path="res://assets/sprites/GUI/HealthBalloon3.png" id="4_1w0ty"]
+[ext_resource type="PackedScene" uid="uid://bo3jx8bslydcy" path="res://assets/prefabs/UI/menu_pausa.tscn" id="5_64pek"]
+[ext_resource type="PackedScene" uid="uid://c0yeubolsrbmy" path="res://assets/prefabs/UI/deathscreen.tscn" id="6_olmbq"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_xwmny"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iuqd5"]
+load_path = "res://.godot/imported/HealthBalloon1.png-6fcf07d20bbaca27777088456566187d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6mj0d"]
+load_path = "res://.godot/imported/HealthBalloon2.png-241e2764154a29c37ec95ea712d19dd6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6tvl7"]
+load_path = "res://.godot/imported/HealthBalloon3.png-b4817f0290afe5a1a3be8f688d0e5e8e.ctex"
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_x5w5j"]
 frames = 3
 pause = true
 one_shot = true
-frame_0/texture = ExtResource("2_bedhv")
+frame_0/texture = SubResource("CompressedTexture2D_iuqd5")
 frame_0/duration = 0.1
-frame_1/texture = ExtResource("3_8oejd")
+frame_1/texture = SubResource("CompressedTexture2D_6mj0d")
 frame_1/duration = 0.1
-frame_2/texture = ExtResource("4_1w0ty")
+frame_2/texture = SubResource("CompressedTexture2D_6tvl7")
 frame_2/duration = 0.1
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_odas5"]
@@ -56,7 +67,7 @@ offset_right = -144.0
 offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_8pfcr")
 
 [node name="Health 1" type="TextureRect" parent="UI/HealthBar"]
@@ -65,7 +76,7 @@ offset_left = 16.0
 offset_top = 12.0
 offset_right = 48.0
 offset_bottom = 60.0
-texture = SubResource("AnimatedTexture_xwmny")
+texture = SubResource("AnimatedTexture_x5w5j")
 
 [node name="Health 2" type="TextureRect" parent="UI/HealthBar"]
 layout_mode = 0
@@ -82,3 +93,21 @@ offset_top = 12.0
 offset_right = 144.0
 offset_bottom = 60.0
 texture = SubResource("AnimatedTexture_b6esx")
+
+[node name="MenuPausa2" parent="UI" instance=ExtResource("5_64pek")]
+process_mode = 3
+visible = false
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+scale = Vector2(0.5, 0.5)
+
+[node name="DeathScreen" parent="UI" instance=ExtResource("6_olmbq")]
+visible = false
+z_index = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 16.0
+offset_bottom = 16.0
+scale = Vector2(0.9, 0.9)
