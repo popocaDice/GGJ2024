@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var MAX_HEALTH = 3
 @export var GRAVITY = 980
 @onready var damage_taken = $DamageTaken
+@onready var sword_effect = $SwordEffect
 
 var direction = -1
 var stunned = false
@@ -60,6 +61,7 @@ func Kill():
 func Attack():
 	stunned = true
 	$AnimatedSprite2D.play("Ataque")
+	sword_effect.play()
 	await $AnimatedSprite2D.frame_changed
 	if $AnimatedSprite2D.flip_h:
 		for body in $"AttackAreaRight".get_overlapping_bodies():
