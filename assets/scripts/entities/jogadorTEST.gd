@@ -105,6 +105,7 @@ func attackAnimation():
 func parryAnimation():
 	
 	await $AnimatedSprite2D.frame_changed
+	$Parry.play()
 	parry = true
 	print_debug("parry")
 	await $AnimatedSprite2D.frame_changed
@@ -125,6 +126,7 @@ func Damage(value, knockDirection):
 			if body.is_in_group("canHurt"):
 				body.Damage(1, 1 if $AnimatedSprite2D.flip_h else -1)
 		return
+	$Hurt.play()
 	health -= value
 	stunned = true
 	if health < 0 :

@@ -14,6 +14,7 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		body.velocity.y = 0
+		get_parent().get_node("Song").stream_paused = true
 		$Jingle.play()
 		$Sprite2D.queue_free()
 		Engine.time_scale = 0.05
@@ -22,4 +23,5 @@ func _on_body_entered(body):
 		await get_tree().create_timer(0.15).timeout
 		Engine.physics_ticks_per_second = 60
 		Engine.time_scale = 1
+		get_parent().get_node("Song").stream_paused = false
 		queue_free()
