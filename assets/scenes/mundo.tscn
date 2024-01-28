@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="1_djbtr"]
 [ext_resource type="PackedScene" uid="uid://djlsynqmlmpee" path="res://assets/prefabs/entities/jogador.tscn" id="1_nry3c"]
 [ext_resource type="PackedScene" uid="uid://p44bqikk7pi1" path="res://assets/prefabs/camera_2d.tscn" id="4_jo5n6"]
-[ext_resource type="PackedScene" uid="uid://daruwf226wgs5" path="res://assets/prefabs/scenery.tscn" id="5_d5tvi"]
+[ext_resource type="PackedScene" uid="uid://bow5bapjqv63p" path="res://assets/prefabs/scenery.tscn" id="5_d5tvi"]
 [ext_resource type="PackedScene" uid="uid://c7sjla36d7a0l" path="res://assets/prefabs/entities/big_goon.tscn" id="6_lpmxx"]
 [ext_resource type="PackedScene" uid="uid://da0trhk7fv7s2" path="res://assets/prefabs/entities/base_goon.tscn" id="6_pr1x8"]
 

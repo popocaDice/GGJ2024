@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://b20wflt2bptb6" path="res://assets/prefabs/tilesets/backgrounds.tres" id="2_mi7px"]
 [ext_resource type="TileSet" uid="uid://2jnxgrtr8d05" path="res://assets/prefabs/tilesets/Blocks.tres" id="3_5u3ky"]
 [ext_resource type="Texture2D" uid="uid://dkr70y17fls0q" path="res://assets/sprites/characters/GGJ2024Characters-Sheet.png" id="4_px7vf"]
-[ext_resource type="PackedScene" uid="uid://daruwf226wgs5" path="res://assets/prefabs/scenery.tscn" id="6_lqv8v"]
+[ext_resource type="PackedScene" uid="uid://bow5bapjqv63p" path="res://assets/prefabs/scenery.tscn" id="6_lqv8v"]
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="7_g5g44"]
 [ext_resource type="AudioStream" uid="uid://dp63rksb0egko" path="res://assets/sounds/bgm/Entry of the Gladiator.mp3" id="8_btx4k"]
 [ext_resource type="AudioStream" uid="uid://76ieb8b6o624" path="res://assets/sounds/sfx/tart/hit.wav" id="9_iwq30"]

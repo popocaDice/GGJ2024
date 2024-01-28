@@ -1,12 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://cth0wsmcxte4v"]
+[gd_scene load_steps=12 format=3 uid="uid://cwythl454ymde"]
 
-[ext_resource type="PackedScene" uid="uid://daruwf226wgs5" path="res://assets/prefabs/scenery.tscn" id="1_vvt35"]
+[ext_resource type="PackedScene" uid="uid://bow5bapjqv63p" path="res://assets/prefabs/scenery.tscn" id="1_vvt35"]
 [ext_resource type="PackedScene" uid="uid://p34te5oaadng" path="res://assets/prefabs/background.tscn" id="2_ohhqy"]
 [ext_resource type="PackedScene" uid="uid://djlsynqmlmpee" path="res://assets/prefabs/entities/jogador.tscn" id="3_xmih0"]
 [ext_resource type="PackedScene" uid="uid://p44bqikk7pi1" path="res://assets/prefabs/camera_2d.tscn" id="4_jmsdd"]
 [ext_resource type="Texture2D" uid="uid://e718d30qvlj1" path="res://assets/sprites/backgrounds/props.png" id="5_jnjej"]
 [ext_resource type="Script" path="res://assets/scripts/Balloon.gd" id="5_r2u2l"]
-[ext_resource type="PackedScene" uid="uid://eicnb77qgbwb" path="res://assets/prefabs/scene_loader.tscn" id="7_d7can"]
+[ext_resource type="PackedScene" uid="uid://ivlwmmptfaoa" path="res://assets/prefabs/scene_loader.tscn" id="7_d7can"]
 [ext_resource type="AudioStream" uid="uid://bdlc31hdpxw64" path="res://assets/sounds/sfx/pickupJingle.wav" id="7_v7wkp"]
 [ext_resource type="Script" path="res://assets/scripts/Dica.gd" id="8_yamec"]
 
