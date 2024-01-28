@@ -60,7 +60,7 @@ func Kill():
 func Attack():
 	stunned = true
 	$AnimatedSprite2D.play("Ataque")
-	await get_tree().create_timer(0.2).timeout
+	await $AnimatedSprite2D.frame_changed
 	if $AnimatedSprite2D.flip_h:
 		for body in $"AttackAreaRight".get_overlapping_bodies():
 			if body.is_in_group("player"): body.Damage(1, 1 if $AnimatedSprite2D.flip_h else -1)

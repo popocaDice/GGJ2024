@@ -15,8 +15,8 @@ extends CharacterBody2D
 @onready var deathscreen = $Deathscreen
 
 var jumpInput = false
-var attack = false
 var stunned = false
+var parry = false
 var unstoppableAnimation = false
 var health
 
@@ -32,7 +32,7 @@ func _physics_process(delta):
 	var input = Vector2.ZERO
 	input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 		
-	if attack or stunned:
+	if unstoppableAnimation or stunned:
 		input = Vector2.ZERO
 	
 	if not stunned:
@@ -44,14 +44,19 @@ func _physics_process(delta):
 			queueAnimation("Andando", false)
 			if input.x > 0:
 				animatedSprite.flip_h = true
+				$ParryArea.scale.x = 1
 			elif input.x < 0:
 				animatedSprite.flip_h = false
+				$ParryArea.scale.x = -1
 					
 	
-	if Input.is_action_just_pressed("Pie") and not (attack or stunned):
+	if Input.is_action_just_pressed("Pie") and not (unstoppableAnimation or stunned):
 		queueAnimation("Torta", true)
-		attack = true
 		attackAnimation()
+		
+	if Input.is_action_just_pressed("Parry") and not (unstoppableAnimation or stunned):
+		queueAnimation("Parry", true)
+		parryAnimation()
 	
 	if is_on_floor():
 		jumpInput = false
@@ -96,8 +101,16 @@ func attackAnimation():
 	pie.global_position = global_position + Vector2(0, -5)
 	pie.get_child(0).flip_h = $AnimatedSprite2D.flip_h
 	pie.Throw()
-	await get_tree().create_timer(0.3).timeout
-	attack = false
+	
+func parryAnimation():
+	
+	await $AnimatedSprite2D.frame_changed
+	parry = true
+	print_debug("parry")
+	await $AnimatedSprite2D.frame_changed
+	await $AnimatedSprite2D.frame_changed
+	parry = false
+	print_debug("acabou")
 
 func queueAnimation(name, isUnstoppable):
 	if unstoppableAnimation:
@@ -107,6 +120,11 @@ func queueAnimation(name, isUnstoppable):
 
 func Damage(value, knockDirection):
 	
+	if parry:
+		for body in $ParryArea.get_overlapping_bodies():
+			if body.is_in_group("canHurt"):
+				body.Damage(1, 1 if $AnimatedSprite2D.flip_h else -1)
+		return
 	health -= value
 	stunned = true
 	if health < 0 :
