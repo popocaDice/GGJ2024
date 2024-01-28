@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://djlsynqmlmpee"]
+[gd_scene load_steps=7 format=3 uid="uid://djlsynqmlmpee"]
 
 [ext_resource type="Script" path="res://assets/scripts/entities/jogadorTEST.gd" id="1_xhm5r"]
 [ext_resource type="SpriteFrames" uid="uid://bo6btum4kwyl3" path="res://assets/animations/palhaco.tres" id="2_o3fh2"]
 [ext_resource type="AudioStream" uid="uid://b1tdh1ni45j13" path="res://assets/sounds/sfx/player/jumpsound.wav" id="3_h4ce4"]
-[ext_resource type="AudioStream" uid="uid://beoqw765qt657" path="res://assets/sounds/sfx/player/Yikes.wav" id="4_wp34k"]
-[ext_resource type="AudioStream" uid="uid://76ieb8b6o624" path="res://assets/sounds/sfx/tart/hit.wav" id="5_faen0"]
+[ext_resource type="AudioStream" uid="uid://beoqw765qt657" path="res://assets/sounds/sfx/player/Yikes.wav" id="4_gnsag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfk41"]
 size = Vector2(14, 21.5)
@@ -41,9 +40,5 @@ bus = &"SFX"
 position = Vector2(11, -11)
 shape = SubResource("RectangleShape2D_1740a")
 
-[node name="Hurt" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_wp34k")
-bus = &"SFX"
-
-[node name="Parry" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_faen0")
+[node name="Yikes" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_gnsag")

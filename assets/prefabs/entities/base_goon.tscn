@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://assets/scripts/entities/base_goon.gd" id="1_2i3rb"]
 [ext_resource type="SpriteFrames" uid="uid://c0fbjl3agp3u6" path="res://assets/animations/base_goon.tres" id="2_i7khy"]
 [ext_resource type="AudioStream" uid="uid://dhpobhwya3vog" path="res://assets/sounds/sfx/enemies/monster_hit.wav" id="3_x67wo"]
-[ext_resource type="AudioStream" uid="uid://dxtee0eeyg4cy" path="res://assets/sounds/sfx/enemies/Sword Cut.wav" id="4_tj0l8"]
+[ext_resource type="AudioStream" uid="uid://dxtee0eeyg4cy" path="res://assets/sounds/sfx/enemies/Sword Cut.wav" id="4_0a24u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ges8p"]
 size = Vector2(12, 21)
@@ -86,8 +86,8 @@ shape = SubResource("RectangleShape2D_tw5dm")
 stream = ExtResource("3_x67wo")
 bus = &"SFX"
 
-[node name="SwordSwing" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_tj0l8")
+[node name="SwordEffect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_0a24u")
 bus = &"SFX"
 
 [connection signal="body_exited" from="LedgeRight" to="." method="_on_ledge_right"]
