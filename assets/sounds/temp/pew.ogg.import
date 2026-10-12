@@ -1,14 +1,14 @@
 [remap]
 
-importer="ogg_vorbis"
+importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://drargx7n8wuo1"
-path="res://.godot/imported/pew.ogg-8d8e7a7de618972bd33c3b233896da25.oggvorbisstr"
+path="res://.godot/imported/pew.ogg-0992f9164a298444970635bfac204d2f.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/temp/pew.ogg"
-dest_files=["res://.godot/imported/pew.ogg-8d8e7a7de618972bd33c3b233896da25.oggvorbisstr"]
+dest_files=["res://.godot/imported/pew.ogg-0992f9164a298444970635bfac204d2f.oggvorbisstr"]
 
 [params]
 

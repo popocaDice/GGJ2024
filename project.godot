@@ -28,6 +28,10 @@ window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/canvas_textures/default_texture_filter=1
 
+[dotnet]
+
+project/assembly_name="Ggj 2024"
+
 [input]
 
 Pie={

@@ -1,14 +1,14 @@
 [remap]
 
-importer="ogg_vorbis"
+importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://vfiax6hcrnba"
-path="res://.godot/imported/é uai.ogg-67e3134b52c147a0314c864ca316397c.oggvorbisstr"
+path="res://.godot/imported/é uai.ogg-07bacc469ba9bfcbea3397821554ccdf.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/speaches/é uai.ogg"
-dest_files=["res://.godot/imported/é uai.ogg-67e3134b52c147a0314c864ca316397c.oggvorbisstr"]
+dest_files=["res://.godot/imported/é uai.ogg-07bacc469ba9bfcbea3397821554ccdf.oggvorbisstr"]
 
 [params]
 

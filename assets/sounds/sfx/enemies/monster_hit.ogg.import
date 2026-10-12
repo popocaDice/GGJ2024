@@ -1,14 +1,14 @@
 [remap]
 
-importer="ogg_vorbis"
+importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dhpobhwya3vog"
-path="res://.godot/imported/monster_hit.ogg-880f3a2d2d743516b9f32542825e86f0.oggvorbisstr"
+path="res://.godot/imported/monster_hit.ogg-c38a675fea1f71a2c19c0c86471d1ec2.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/sfx/enemies/monster_hit.ogg"
-dest_files=["res://.godot/imported/monster_hit.ogg-880f3a2d2d743516b9f32542825e86f0.oggvorbisstr"]
+dest_files=["res://.godot/imported/monster_hit.ogg-c38a675fea1f71a2c19c0c86471d1ec2.oggvorbisstr"]
 
 [params]
 

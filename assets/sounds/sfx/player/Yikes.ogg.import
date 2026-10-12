@@ -1,14 +1,14 @@
 [remap]
 
-importer="ogg_vorbis"
+importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://beoqw765qt657"
-path="res://.godot/imported/Yikes.ogg-1a87aca2c177fe12636ddc2461615107.oggvorbisstr"
+path="res://.godot/imported/Yikes.ogg-a7af546735b3f58040a3b2bfc9d341c8.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/sfx/player/Yikes.ogg"
-dest_files=["res://.godot/imported/Yikes.ogg-1a87aca2c177fe12636ddc2461615107.oggvorbisstr"]
+dest_files=["res://.godot/imported/Yikes.ogg-a7af546735b3f58040a3b2bfc9d341c8.oggvorbisstr"]
 
 [params]
 

@@ -1,14 +1,14 @@
 [remap]
 
-importer="ogg_vorbis"
+importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dkk53h17ksx2q"
-path="res://.godot/imported/Public Laugh.ogg-417be39c9aaba39efefe466991eca000.oggvorbisstr"
+path="res://.godot/imported/Public Laugh.ogg-1c7d733825f65a8c45563d58cd2316a0.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/public/Public Laugh.ogg"
-dest_files=["res://.godot/imported/Public Laugh.ogg-417be39c9aaba39efefe466991eca000.oggvorbisstr"]
+dest_files=["res://.godot/imported/Public Laugh.ogg-1c7d733825f65a8c45563d58cd2316a0.oggvorbisstr"]
 
 [params]
 

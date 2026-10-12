@@ -1,14 +1,14 @@
 [remap]
 
-importer="ogg_vorbis"
+importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dp63rksb0egko"
-path="res://.godot/imported/Entry of the Gladiator.ogg-3619582d230ef829a7ec22ad4c421b9b.oggvorbisstr"
+path="res://.godot/imported/Entry of the Gladiator.ogg-47093bf316dcd9fb8eb5c897bd7e4a3c.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/bgm/Entry of the Gladiator.ogg"
-dest_files=["res://.godot/imported/Entry of the Gladiator.ogg-3619582d230ef829a7ec22ad4c421b9b.oggvorbisstr"]
+dest_files=["res://.godot/imported/Entry of the Gladiator.ogg-47093bf316dcd9fb8eb5c897bd7e4a3c.oggvorbisstr"]
 
 [params]
 

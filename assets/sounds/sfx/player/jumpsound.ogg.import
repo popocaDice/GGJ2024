@@ -1,14 +1,14 @@
 [remap]
 
-importer="ogg_vorbis"
+importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b1tdh1ni45j13"
-path="res://.godot/imported/jumpsound.ogg-156c5b485d468729337ab2c0ca50fcbb.oggvorbisstr"
+path="res://.godot/imported/jumpsound.ogg-01bea5eb9be460ff363d1dfb8a6dd169.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/sfx/player/jumpsound.ogg"
-dest_files=["res://.godot/imported/jumpsound.ogg-156c5b485d468729337ab2c0ca50fcbb.oggvorbisstr"]
+dest_files=["res://.godot/imported/jumpsound.ogg-01bea5eb9be460ff363d1dfb8a6dd169.oggvorbisstr"]
 
 [params]
 

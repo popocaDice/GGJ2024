@@ -1,14 +1,14 @@
 [remap]
 
-importer="ogg_vorbis"
+importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://d0pq7sgkgmqei"
-path="res://.godot/imported/Tá sainu da jaula o monstro.ogg-3fe99a3c3572f59555bd185c089099e7.oggvorbisstr"
+path="res://.godot/imported/Tá sainu da jaula o monstro.ogg-3bf82582d594d6e4cac0534df3343244.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/speaches/Tá sainu da jaula o monstro.ogg"
-dest_files=["res://.godot/imported/Tá sainu da jaula o monstro.ogg-3fe99a3c3572f59555bd185c089099e7.oggvorbisstr"]
+dest_files=["res://.godot/imported/Tá sainu da jaula o monstro.ogg-3bf82582d594d6e4cac0534df3343244.oggvorbisstr"]
 
 [params]
 

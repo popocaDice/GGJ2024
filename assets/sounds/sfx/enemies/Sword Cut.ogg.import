@@ -1,14 +1,14 @@
 [remap]
 
-importer="ogg_vorbis"
+importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dxtee0eeyg4cy"
-path="res://.godot/imported/Sword Cut.ogg-f84b8f0e6d32629c3b9407acc8db399a.oggvorbisstr"
+path="res://.godot/imported/Sword Cut.ogg-f21ce3e1689461e8c9a5d5b4280832bc.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/sfx/enemies/Sword Cut.ogg"
-dest_files=["res://.godot/imported/Sword Cut.ogg-f84b8f0e6d32629c3b9407acc8db399a.oggvorbisstr"]
+dest_files=["res://.godot/imported/Sword Cut.ogg-f21ce3e1689461e8c9a5d5b4280832bc.oggvorbisstr"]
 
 [params]
 

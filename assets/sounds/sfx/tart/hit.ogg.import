@@ -1,14 +1,14 @@
 [remap]
 
-importer="ogg_vorbis"
+importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://76ieb8b6o624"
-path="res://.godot/imported/hit.ogg-e8aec924aca91e18282769c12c750600.oggvorbisstr"
+path="res://.godot/imported/hit.ogg-1cd21fe0e6811b40d2c29c0045e88f8e.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sounds/sfx/tart/hit.ogg"
-dest_files=["res://.godot/imported/hit.ogg-e8aec924aca91e18282769c12c750600.oggvorbisstr"]
+dest_files=["res://.godot/imported/hit.ogg-1cd21fe0e6811b40d2c29c0045e88f8e.oggvorbisstr"]
 
 [params]
 
